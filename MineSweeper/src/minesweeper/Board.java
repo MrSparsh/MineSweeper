@@ -104,7 +104,7 @@ public class Board extends JPanel implements ActionListener{
         }
     }
     void createOptionPane(String winningStatus){
-        String[] options = {"Yes","No"};
+        String[] options = {"Play Again"};
         int choice = JOptionPane.showOptionDialog(this,
         "You have "+winningStatus+" the game\n"
         + "Do you want to play again?",
@@ -113,11 +113,10 @@ public class Board extends JPanel implements ActionListener{
         JOptionPane.QUESTION_MESSAGE,
         null,
         options,
-        options[1]);
+        options[0]);
         System.out.println(""+choice);
         if(choice==0){
             reset();
-        }else{
         }
     }
     public void reset(){
